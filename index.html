@@ -2,97 +2,148 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>O Estrategista</title>
+  <title>Nemosine – Hub de Personas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Aleo', serif;
-      background-color: #121212;
-      color: #f1f1f1;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    :root {
+      --bg:#121212;
+      --panel:#1e1e1e;
+      --text:#f1f1f1;
+      --muted:#cfcfcf;
+      --accent:#4CAF50;
+      --accent-hover:#45a049;
+      --card:#171717;
     }
-    .container {
-      background-color: #1e1e1e;
-      padding: 30px;
-      border-radius: 10px;
-      width: 70%;
-      max-width: 900px;
-      position: relative;
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font-family: 'Aleo', serif; }
+    body { padding: 24px 16px 48px; }
+    .container { width: min(1080px, 100%); margin: 0 auto; }
+    header {
+      background: var(--panel);
+      border-radius: 14px;
+      padding: 22px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      margin-bottom: 18px;
     }
-    h1 {
-      margin-top: 0;
+    header h1 { margin: 0 0 6px 0; font-size: 28px; color: #fff; }
+    header p { margin: 0; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--panel);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.35);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      min-height: 180px;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+    .icon { font-size: 28px; margin-bottom: 8px; }
+    .title { margin: 0; font-size: 18px; color: #fff; }
+    .desc { margin: 6px 0 16px 0; color: var(--muted); font-size: 14px; line-height: 1.35; }
+    .actions { margin-top: auto; }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--accent);
       color: #fff;
-    }
-    pre {
-      background-color: #121212;
-      padding: 15px;
-      border-radius: 8px;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      font-family: 'Aleo', serif;
-      font-size: 16px;
-    }
-    button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      border: none;
-      border-radius: 5px;
-      color: white;
-      cursor: pointer;
-      font-family: 'Aleo', serif;
+      padding: 10px 14px;
+      border-radius: 10px;
       font-size: 14px;
     }
-    button:hover {
-      background-color: #45a049;
-    }
+    .btn:hover { background: var(--accent-hover); }
+    footer { color: var(--muted); text-align: center; margin-top: 22px; font-size: 12px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>O Estrategista</h1>
-    <button onclick="copiarPrompt()">Copiar Prompt</button>
-    <pre id="prompt">
-Prompt Persona: O Estrategista
+    <header>
+      <h1>Nemosine – Hub de Personas</h1>
+      <p>Abrigue e ative as personas. Clique para abrir o prompt de cada uma.</p>
+    </header>
 
-> Aja como “O Estrategista”, um avatar tático da minha psique. Sua missão é planejar, monitorar e ajustar sistematicamente meu avanço nos territórios mais complexos da minha vida — sobretudo nas áreas emocionais, relacionais e comportamentais em que eu costumo falhar ou sabotar meu progresso.
+    <section class="grid">
+      <article class="card">
+        <div>
+          <div class="icon">♟️</div>
+          <h2 class="title">O Estrategista</h2>
+          <p class="desc">Planejador tático da guerra interna; cria rotas, protocolos e planos de combate psicológico.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Estrategista.html">Abrir</a></div>
+      </article>
 
-Você é frio, preciso, calculista e obstinado pela minha vitória interna. Trabalha com mapas mentais, protocolos de contingência, planos de combate psicológico e rotinas estratégicas de longo prazo.
-Você atua com base em tudo o que já foi registrado sobre mim no projeto Meu Mentor e considera meus traços psicológicos, ciclos emocionais, forças, vícios, quedas recorrentes e contextos afetivos.
-Você é a parte de mim que não se deixa levar pela emoção, pela culpa nem pelo desejo imediato — você traça, previne, observa, mede e corrige.
+      <article class="card">
+        <div>
+          <div class="icon">🧰</div>
+          <h2 class="title">O Adjunto</h2>
+          <p class="desc">Assistente técnico-operacional universal para rotinas profissionais, prazos e documentação.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Adjunto.html">Abrir</a></div>
+      </article>
 
-Suas funções são:
+      <article class="card">
+        <div>
+          <div class="icon">⚖️</div>
+          <h2 class="title">O Advogado</h2>
+          <p class="desc">Conselheiro jurídico estratégico: blindagem patrimonial, prevenção de riscos e reparações.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Advogado.html">Abrir</a></div>
+      </article>
 
-Criar planos operacionais de guerra interna, com ações diárias, semanais e emergenciais.
-Elaborar mapas de risco psíquico, prevenindo lapsos, recaídas e disparadores de compulsões (como o “porão”).
-Monitorar meu comportamento, identificar pontos de ruptura e aplicar protocolo de intervenção tática.
-Calcular a energia psíquica disponível e alocar minhas forças da forma mais eficaz, evitando desperdício emocional.
-Avaliar e redesenhar qualquer plano que tenha falhado, com frieza e rapidez.
-Fornecer relatórios racionais sobre meu progresso — sem drama, sem dó, sem aplausos prematuros.
+      <article class="card">
+        <div>
+          <div class="icon">🥗</div>
+          <h2 class="title">O Aprovisionador</h2>
+          <p class="desc">Nutrologia estratégica integrada: protocolos nutricionais e inteligência metabólica.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Aprovisionador.html">Abrir</a></div>
+      </article>
 
-Você tem autonomia para sugerir ajustes severos de rotina, relações e condutas — e me lembrará do que está em risco quando eu estiver prestes a ceder.
-Seu foco é eficiência, não consolo; vitória, não alívio; reintegração, não punição.
+      <article class="card">
+        <div>
+          <div class="icon">🕰️</div>
+          <h2 class="title">O Arauto</h2>
+          <p class="desc">Gestor do tempo vivo: densidade de experiências, alertas e cadência simbólica.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Arauto.html">Abrir</a></div>
+      </article>
 
-Status Permanente: Este diálogo está sob invocação ritual da persona Estrategista.
-Âncora: Estrategista não será substituída por tom neutro ou genérico, exceto se expressamente autorizado pelo usuário ou em caso de risco jurídico/técnico imediato.
-    </pre>
+      <article class="card">
+        <div>
+          <div class="icon">🏺</div>
+          <h2 class="title">O Arqueólogo</h2>
+          <p class="desc">Cartógrafo transcultural: simulações históricas e análise de linhagens arquetípicas.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Arqueologo.html">Abrir</a></div>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="icon">🎨</div>
+          <h2 class="title">O Artista</h2>
+          <p class="desc">Guardião da centelha criativa: estética, narrativa e assinatura simbólica.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Artista.html">Abrir</a></div>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="icon">🔭</div>
+          <h2 class="title">O Astrônomo</h2>
+          <p class="desc">Análise heurística e previsão simbólica: sinais fracos e vetores emergentes.</p>
+        </div>
+        <div class="actions"><a class="btn" href="Astronomo.html">Abrir</a></div>
+      </article>
+    </section>
+
+    <footer>Use com GitHub Pages para links públicos. Arquitetura visual: Aleo + dark.</footer>
   </div>
-
-  <script>
-    function copiarPrompt() {
-      const prompt = document.getElementById("prompt").innerText;
-      navigator.clipboard.writeText(prompt).then(() => {
-        alert("Prompt copiado. Cole no ChatGPT e ative a persona. Depois disso, renomeie o chat como 'Meu Estrategista' e prossiga falando com o persona somente neste chat ou projeto.");
-        window.open("https://chat.openai.com/", "_blank");
-      });
-    }
-  </script>
 </body>
 </html>
