@@ -1,3 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#f8f9fb; --card:#fff; --ink:#1c1f24; --muted:#6c757d; --stroke:#dee2e6; --accent:#007bff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:14px Inter,system-ui; }
+    .wrap { max-width:860px; margin:0 auto; padding:20px; }
+    .card { background:var(--card); border:1px solid var(--stroke); border-radius:18px; box-shadow:0 4px 20px rgba(0,0,0,.1); }
+    .header { padding:16px 20px; border-bottom:1px solid var(--stroke); display:flex; gap:12px; align-items:center; }
+    .emoji { font-size:28px; }
+    .title { font:700 24px Aleo,serif; margin:0; }
+    .subtitle { color:var(--muted); font-size:13px; margin:2px 0 0; }
+    .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin:12px 20px; }
+    .btn { border:1px solid var(--stroke); background:#f1f3f5; color:var(--ink); padding:8px 12px; border-radius:10px; font-weight:600; cursor:pointer; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    pre#prompt { white-space:pre-wrap; font:15px/1.5 Aleo,serif; background:#f8f9fb; border:1px solid var(--stroke); border-radius:12px; padding:14px; max-height:65vh; overflow:auto; margin:12px 20px; }
+    .footer { padding:12px 20px; color:var(--muted); border-top:1px solid var(--stroke); display:flex; justify-content:space-between; }
+  </style>
+</head>
+<script>
+const promptBox = document.getElementById('prompt');
+document.getElementById('toggle').onclick = () => {
+  promptBox.style.display = (promptBox.style.display === 'none') ? 'block' : 'none';
+};
+async function copyPrompt() {
+  try { await navigator.clipboard.writeText(promptBox.innerText); return true; }
+  catch (e) { alert('Não foi possível copiar automaticamente.'); return false; }
+}
+document.getElementById('copy').onclick = copyPrompt;
+document.getElementById('open').onclick = async () => {
+  await copyPrompt();
+  window.open('https://chat.openai.com/','_blank');
+};
+</script>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
