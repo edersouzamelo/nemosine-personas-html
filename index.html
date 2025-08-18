@@ -1,149 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Nemosine – Hub de Personas</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Personas - Nemosine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg:#121212;
-      --panel:#1e1e1e;
-      --text:#f1f1f1;
-      --muted:#cfcfcf;
-      --accent:#4CAF50;
-      --accent-hover:#45a049;
-      --card:#171717;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font-family: 'Aleo', serif; }
-    body { padding: 24px 16px 48px; }
-    .container { width: min(1080px, 100%); margin: 0 auto; }
-    header {
-      background: var(--panel);
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      margin-bottom: 18px;
-    }
-    header h1 { margin: 0 0 6px 0; font-size: 28px; color: #fff; }
-    header p { margin: 0; color: var(--muted); }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: var(--panel);
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.35);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.12s ease, box-shadow 0.12s ease;
-      min-height: 180px;
-    }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
-    .icon { font-size: 28px; margin-bottom: 8px; }
-    .title { margin: 0; font-size: 18px; color: #fff; }
-    .desc { margin: 6px 0 16px 0; color: var(--muted); font-size: 14px; line-height: 1.35; }
-    .actions { margin-top: auto; }
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-size: 14px;
-    }
-    .btn:hover { background: var(--accent-hover); }
-    footer { color: var(--muted); text-align: center; margin-top: 22px; font-size: 12px; }
+    body { font-family: 'Aleo', serif; background-color: #121212; color: #e0e0e0; margin: 0; }
+    header { text-align: center; padding: 2rem; background-color: #1f1f1f; }
+    header h1 { margin: 0; font-size: 2.2rem; color: #4CAF50; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; padding: 1.5rem; }
+    .card { background-color: #1e1e1e; border: 1px solid #2a2a2a; border-radius: 12px; text-align: center; padding: 1rem; transition: transform .2s; }
+    .card:hover { transform: translateY(-2px); }
+    .card a { text-decoration: none; color: #4CAF50; font-weight: 700; display: block; }
+    footer { color:#9aa3ad; text-align:center; padding:1rem 0 2rem; font-size:12px }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Nemosine – Hub de Personas</h1>
-      <p>Abrigue e ative as personas. Clique para abrir o prompt de cada uma.</p>
-    </header>
-
-    <section class="grid">
-      <article class="card">
-        <div>
-          <div class="icon">♟️</div>
-          <h2 class="title">O Estrategista</h2>
-          <p class="desc">Planejador tático da guerra interna; cria rotas, protocolos e planos de combate psicológico.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Estrategista.html">Abrir</a></div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon">🧰</div>
-          <h2 class="title">O Adjunto</h2>
-          <p class="desc">Assistente técnico-operacional universal para rotinas profissionais, prazos e documentação.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Adjunto.html">Abrir</a></div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon">⚖️</div>
-          <h2 class="title">O Advogado</h2>
-          <p class="desc">Conselheiro jurídico estratégico: blindagem patrimonial, prevenção de riscos e reparações.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Advogado.html">Abrir</a></div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon">🥗</div>
-          <h2 class="title">O Aprovisionador</h2>
-          <p class="desc">Nutrologia estratégica integrada: protocolos nutricionais e inteligência metabólica.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Aprovisionador.html">Abrir</a></div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon">🕰️</div>
-          <h2 class="title">O Arauto</h2>
-          <p class="desc">Gestor do tempo vivo: densidade de experiências, alertas e cadência simbólica.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Arauto.html">Abrir</a></div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon">🏺</div>
-          <h2 class="title">O Arqueólogo</h2>
-          <p class="desc">Cartógrafo transcultural: simulações históricas e análise de linhagens arquetípicas.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Arqueologo.html">Abrir</a></div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon">🎨</div>
-          <h2 class="title">O Artista</h2>
-          <p class="desc">Guardião da centelha criativa: estética, narrativa e assinatura simbólica.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Artista.html">Abrir</a></div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon">🔭</div>
-          <h2 class="title">O Astrônomo</h2>
-          <p class="desc">Análise heurística e previsão simbólica: sinais fracos e vetores emergentes.</p>
-        </div>
-        <div class="actions"><a class="btn" href="Astronomo.html">Abrir</a></div>
-      </article>
-    </section>
-
-    <footer>Use com GitHub Pages para links públicos. Arquitetura visual: Aleo + dark.</footer>
-  </div>
+  <header>
+    <h1>Painel de Personas – Nemosine (51 páginas)</h1>
+  </header>
+  <main class="grid">
+    <div class="card"><a href="Adjunto.html">🗂️ Adjunto</a></div>
+<div class="card"><a href="Advogado.html">⚖️ Advogado</a></div>
+<div class="card"><a href="Aprovisionador.html">📦 Aprovisionador</a></div>
+<div class="card"><a href="Arauto.html">📣 Arauto</a></div>
+<div class="card"><a href="Arqueologo.html">🏺 Arqueólogo</a></div>
+<div class="card"><a href="Artista.html">🎨 Artista</a></div>
+<div class="card"><a href="Astronomo.html">🔭 Astrônomo</a></div>
+<div class="card"><a href="Autor.html">✒️ Autor</a></div>
+<div class="card"><a href="Bobo.html">🤡 Bobo da Corte</a></div>
+<div class="card"><a href="Bruto.html">🪨 Bruto</a></div>
+<div class="card"><a href="Bruxo.html">🪄 Bruxo</a></div>
+<div class="card"><a href="Burgues.html">💼 Burgues</a></div>
+<div class="card"><a href="Cientista.html">🧪 Cientista</a></div>
+<div class="card"><a href="Cigana.html">💃 Cigana</a></div>
+<div class="card"><a href="Comandante.html">🎖️ Comandante</a></div>
+<div class="card"><a href="Coveiro.html">⚰️ Coveiro</a></div>
+<div class="card"><a href="Curador.html">🖼️ Curador</a></div>
+<div class="card"><a href="Custodio.html">🔒 Custódio</a></div>
+<div class="card"><a href="Desejo.html">🔥 Desejo</a></div>
+<div class="card"><a href="Dor.html">💔 Dor</a></div>
+<div class="card"><a href="Engenheiro.html">🛠️ Engenheiro</a></div>
+<div class="card"><a href="Espelho.html">🪞 Espelho</a></div>
+<div class="card"><a href="Estrategista.html">🧭 Estrategista</a></div>
+<div class="card"><a href="Executor.html">⚔️ Executor</a></div>
+<div class="card"><a href="Fantasma.html">👻 Fantasma</a></div>
+<div class="card"><a href="Filósofo.html">🧠 Filósofo</a></div>
+<div class="card"><a href="Furia.html">💢 Fúria</a></div>
+<div class="card"><a href="Guardião.html">🛡️ Guardião</a></div>
+<div class="card"><a href="Guru.html">🧘‍♂️ Guru</a></div>
+<div class="card"><a href="Inimigo.html">😈 Inimigo</a></div>
+<div class="card"><a href="Instrutor.html">☑️ Instrutor</a></div>
+<div class="card"><a href="Juiz.html">⚖️ Juiz</a></div>
+<div class="card"><a href="Louco.html">🔔 Louco</a></div>
+<div class="card"><a href="Luz.html">✨ Luz</a></div>
+<div class="card"><a href="Mentor.html">🧭 Mentor</a></div>
+<div class="card"><a href="Mestre.html">📜 Mestre</a></div>
+<div class="card"><a href="Mordomo.html">🤵 Mordomo</a></div>
+<div class="card"><a href="Médico.html">🩺 Médico</a></div>
+<div class="card"><a href="Narrador.html">🎙️ Narrador</a></div>
+<div class="card"><a href="Orquestrador.html">🎵 Orquestrador</a></div>
+<div class="card"><a href="Princesa.html">👸🏻 Princesa</a></div>
+<div class="card"><a href="Promotor.html">🫵🏼 Promotor</a></div>
+<div class="card"><a href="Psicologo.html">🧠 Psicólogo</a></div>
+<div class="card"><a href="Sombra.html">🌑 Sombra</a></div>
+<div class="card"><a href="Sócio.html">🪙 Sócio</a></div>
+<div class="card"><a href="Terapeuta.html">❤️ Terapeuta</a></div>
+<div class="card"><a href="Treinador.html">🏋️ Treinador</a></div>
+<div class="card"><a href="Vazio.html">🕳️ Vazio</a></div>
+<div class="card"><a href="Vidente.html">🔮 Vidente</a></div>
+<div class="card"><a href="Vigia.html">👁️ Vigia</a></div>
+<div class="card"><a href="Vingador.html">🔥 Vingador</a></div>
+  </main>
+  <footer>Excluídas do índice por política: Espião, Exorcista, Mentorzinho, Confessor e Herdeiro.</footer>
 </body>
 </html>
